@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <properties resource="configuration.properties"/>
+  <classPathEntry location="C:/Users/sunyou/.m2/repository/mysql/mysql-connector-java/5.1.32/mysql-connector-java-5.1.32.jar"/>
+  <context id="commonframe_schema" targetRuntime="MyBatis3" >
+    <!--This plugin is only valid for MyBatis3 target runtime -->
+    <plugin type="org.mybatis.generator.plugins.RowBoundsPlugin" /> 
+    <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+	<commentGenerator>
+		<property name="suppressAllComments" value="false"/>
+		<property name="suppressDate" value="true"/>
+	</commentGenerator>
+    <jdbcConnection driverClass="${jdbc.driverClassName}"
+        connectionURL="${jdbc.commonframe.url}"
+        userId="${jdbc.username}"
+        password="${jdbc.password}">
+    </jdbcConnection>
+    <javaTypeResolver >
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <javaModelGenerator targetPackage="com.syou.emedia.server.model" targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+    <sqlMapGenerator targetPackage="com.syou.emedia.server.xml"  targetProject="src/main/resources">
+      <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.syou.emedia.server.mapper"  targetProject="src/main/java">
+      <property name="enableSubPackages" value="true" />
+    </javaClientGenerator>
+    
+    <table schema="test" tableName="platform_test">
+        <generatedKey column="id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <!-- 
+    <table schema="test" tableName="platform_log" domainObjectName="log.PFLog">
+        <generatedKey column="log_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_commodity_type" domainObjectName="commodity.PFCommodityType">
+        <generatedKey column="commodity_type_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_commodity" domainObjectName="commodity.PFCommodity">
+        <generatedKey column="commodity_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_client" domainObjectName="client.PFClient">
+        <generatedKey column="client_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_qrcode" domainObjectName="qrcode.PFQrcode">
+        <generatedKey column="code_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    
+    <table schema="test" tableName="platform_wifi_report" domainObjectName="report.PFWifiReport">
+        <generatedKey column="report_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_app_promote" domainObjectName="app.PFAppPromote">
+        <generatedKey column="app_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_app_download" domainObjectName="qrcode.PFAppDownload">
+        <generatedKey column="download_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_free_give_record" domainObjectName="app.PFFreeGiveRecord">
+        <generatedKey column="give_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    -->
+    <!-- 
+    <table schema="test" tableName="platform_free_gift_config" domainObjectName="app.PFFreeGiftConfig">
+        <generatedKey column="config_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_sync_appinfo" domainObjectName="sync.PFSyncAppInfo">
+        <generatedKey column="sync_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_sync_appinfo_his" domainObjectName="sync.PFSyncAppInfoHis">
+        <generatedKey column="his_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_shipment" domainObjectName="shipment.PFShipment">
+        <generatedKey column="shipment_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_terminal" domainObjectName="terminal.PFTerminal">
+        <generatedKey column="terminal_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_system_info" domainObjectName="system.PFSystem">
+        <generatedKey column="system_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_coupon" domainObjectName="coupon.PFCoupon">
+        <generatedKey column="coupon_id" sqlStatement="mysql" identity="true"/>
+    </table>
+    <table schema="test" tableName="platform_code_mapping" domainObjectName="app.PFCodeMapping">
+        <generatedKey column="code_mapping_id" sqlStatement="mysql" identity="true"/>
+    </table>
+     <table schema="test" tableName="platform_wifi_report" domainObjectName="report.PFWifiReport">
+        <generatedKey column="report_id" sqlStatement="mysql" identity="true"/>
+    </table>
+     -->
+  </context>
+</generatorConfiguration>
