@@ -6,12 +6,12 @@ if [ "$MYSQL_SERVICE_DNS_NAME" ]; then
 fi
 
 if [ "$MYSQL_PORT_3306_TCP_ADDR" ]; then
-	sed  -i 's/^jdbc.url=.*$/jdbc.url=jdbc:mysql:\/\/'$MYSQL_PORT_3306_TCP_ADDR':'$MYSQL_PORT_3306_TCP_PORT'\/'$MYSQL_ENV_MYSQL_DATABASE' /g' /usr/local/tomcat/webapps/datahub_bill-1.0-SNAPSHOT/WEB-INF/classes/config.properties
+	sed  -i 's/^jdbc.url=.*$/jdbc.url=jdbc:mysql:\/\/'$MYSQL_PORT_3306_TCP_ADDR':'$MYSQL_PORT_3306_TCP_PORT'\/'$MYSQL_ENV_MYSQL_DATABASE' /g' /usr/local/tomcat/webapps/emedia/WEB-INF/classes/config.properties
 
 
-	sed -i  's/^jdbc.username=.*$/jdbc.username='$MYSQL_ENV_MYSQL_USER'/g' /usr/local/tomcat/webapps/datahub_bill-1.0-SNAPSHOT/WEB-INF/classes/config.properties
+	sed -i  's/^jdbc.username=.*$/jdbc.username='$MYSQL_ENV_MYSQL_USER'/g' /usr/local/tomcat/webapps/emedia/WEB-INF/classes/config.properties
 
-	sed  -i 's/^jdbc.password=.*$/jdbc.password='$MYSQL_ENV_MYSQL_PASSWORD'/g' /usr/local/tomcat/webapps/datahub_bill-1.0-SNAPSHOT/WEB-INF/classes/config.properties
+	sed  -i 's/^jdbc.password=.*$/jdbc.password='$MYSQL_ENV_MYSQL_PASSWORD'/g' /usr/local/tomcat/webapps/emedia/WEB-INF/classes/config.properties
 
 fi
 

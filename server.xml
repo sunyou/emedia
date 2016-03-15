@@ -136,7 +136,7 @@
                prefix="localhost_access_log." suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
-        <Context path="" docBase="umauthor-0.0.1-SNAPSHOT" debug="0"/>
+        <Context path="" docBase="emedia" debug="0"/>
       </Host>
     </Engine>
   </Service>

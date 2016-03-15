@@ -58,8 +58,8 @@ RUN cd  ./webapps/ \
 run cd ./webapps/ 
 #    && mkdir  data \
 #    && chmod 666 data \
-#    && mv ./server.xml /usr/local/tomcat/conf/ \
-#    && mv ./target/umauthor-0.0.1-SNAPSHOT .
+    && mv ./server.xml /usr/local/tomcat/conf/ \
+    && mv ./target/emedia .
 
 VOLUME /usr/local/tomcat/webapps/data
 
